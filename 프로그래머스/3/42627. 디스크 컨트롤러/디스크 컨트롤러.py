@@ -2,6 +2,8 @@
 1 .heapq는 첫 번째 요소를 기준으로 힙 구성
 2. 하드디스크가 작업을 수행하고 있지 않을 때에는 먼저 요청이 들어온 작업부터 처리
 3. 작업이 끝났을 때 요청들어온 작업들이 여러 개라면, 작업 시간이 작은 작업부터 처리
+4. 시간복잡도O(nlogn) : 힙 구성 = O(n), 최대 n번의(heappop O(logn) + heappush O(logn)) = O(nlogn)
+5. 헤맨 부분 : 문제의 소수점 나머지는 버리는 부분 놓쳐서 계속 틀림
 """
 import heapq as h
 def solution(jobs):
