@@ -7,6 +7,8 @@ import heapq as h
 2. heappop으로 제일 작은 스코빌음식을 꺼냈을 때 K보다 크다면 정답 반환
 3. heappop으로 제일 작은 스코빌 음식을 꺼냈을 때 K보다 작다면 min + sec_min *2 계산 후 heappush
 4. 시간복잡도O(nlogn) : 힙 구성 = O(n), 최대 n/2번의(heappop O(logn) + heappush O(logn)) = O(nlogn)
+5. scoville의 길이 정보를 len(scoville)로 확인하는게 더 느리다고 생각하여 try except로 예외처리를 하였지만,
+   len(scoville)함수가 O(1)로 훨씬 더 빠르다는 것을 알게 되었음. try except는 예외처리 오버헤드가 존재하여 더 느림.
 """
 
 def solution(scoville, K):
