@@ -20,4 +20,9 @@ def DFS():
 ```Python
 def BFS():
   queue.append(루트노드)
+  반복문(queue가 비었을 때까지):
+    현재 노드 = queue.pop()
+    현재 노드에서 할 작업 진행
+    현재 노드에서 조건에 만족하는 모든 정점 queue.append
+
 ```
