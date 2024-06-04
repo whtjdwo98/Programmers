@@ -11,15 +11,11 @@ def init(n, edge):
     distance_list[0] = 1
     for i in edge:  #주어진 edge를 python dictionary로 선언
         if i[0] in graph:  #양방향 간선이기 때문에 조건문 2개 사용하여 dictionary에 정보 삽입
-            temp = graph[i[0]]
-            temp.append(i[1])
-            graph[i[0]] = temp
+            graph[i[0]].append(i[1])
         else:
             graph[i[0]] = [i[1]]
         if i[1] in graph:
-            temp = graph[i[1]]
-            temp.append(i[0])
-            graph[i[1]] = temp
+            graph[i[1]].append(i[0])
         else:
             graph[i[1]] = [i[0]]
 
